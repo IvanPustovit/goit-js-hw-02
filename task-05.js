@@ -1,9 +1,8 @@
 "use strict";
 
 const checkForSpam = function (message) {
-    const includes = message.toLowerCase().includes('sale') || message.toLowerCase().includes('spam')
-    return includes
-}
+    return message.toLowerCase().includes('sale') || message.toLowerCase().includes('spam')
+    }
 
 /*
  * Вызовы функции для проверки работоспособности твоей реализации.

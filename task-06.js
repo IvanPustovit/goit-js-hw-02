@@ -4,19 +4,13 @@ let input;
 const numbers = [];
 let total = 0;
 
-const inputTotal = function () {
-    do {
-        input = prompt('Введите число');
-        numbers.push(Number(input))
-    } while (input !== null)
-    console.log(numbers);
+do {
+    input = prompt('Введите число');
+    input !== null ? numbers.push(Number(input)) : total = 0;
+} while (input !== null)
 
-    for (const number of numbers) {
-        total += number
-
-    }
-    return total
+for (const number of numbers) {
+    numbers.length == 0 ? total = 0 : total += number
 }
 
-inputTotal()
 console.log(total);
