@@ -5,12 +5,17 @@ const numbers = [];
 let total = 0;
 
 do {
-    input = prompt('Введите число');
-    input !== null ? numbers.push(Number(input)) : total = 0;
-} while (input !== null)
+  input = prompt("Введите число");
+  if (input) {
+    numbers.push(Number(input));
+  }
+} while (input !== null);
 
 for (const number of numbers) {
-    numbers.length == 0 ? total = 0 : total += number
+  !!numbers.length;
+  total += number;
 }
 
-console.log(total);
+if (total > 0) {
+  console.log(total);
+}
